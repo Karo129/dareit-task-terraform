@@ -22,3 +22,11 @@ resource "google_compute_instance" "dareit-vm-ci" {
     }
   }
 }
+
+resource "google_storage_bucket" "static-site" {
+  name          = "my-terraform-bucket-29"
+  location      = "us-central1"
+  force_destroy = true
+
+  uniform_bucket_level_access = true
+}
